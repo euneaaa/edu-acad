@@ -7,7 +7,18 @@ public class ForTest2 {
         System.out.println(star);
         for(int i=0;i<star;i++){
             System.out.print("*");
-
+        }
+        System.out.println();
+        for(int i=50; i<star+50; i++){
+            System.out.print("*");
+        }
+        System.out.println();
+        for(int i=0 ;i>-star; i--){         //(int i=star;i>0;i--)
+            System.out.print("*");
+        }
+        System.out.println();
+        for(int i=star+34; i>34; i--){
+            System.out.print("*");
         }
 
     }
