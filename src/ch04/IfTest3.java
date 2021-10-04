@@ -23,7 +23,7 @@ public class IfTest3 {
             }
         }
 
-        System.out.println("score : "+score);
+
         System.out.printf("%C%C", grade, pm);
 
     }
