@@ -1,7 +1,6 @@
 package blackJack;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CardTest {
@@ -11,7 +10,7 @@ public class CardTest {
         Card c2 = new Card("스페이드", "2");
 
         //ArrayList
-        List<Card> cards = new LinkedList();
+        List<Card> cards = new ArrayList();
         cards.add(c1);
         cards.add(new Card("스페이드", "2"));
 
