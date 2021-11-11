@@ -1,0 +1,57 @@
+package javaclass;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class class1 {
+    public static void main(String[] args) {
+        //Stack<Integer> stack = new Stack<>();
+        LinkedList<Character> queue = new LinkedList<>();
+        Scanner input = new Scanner(System.in);
+        System.out.println("문자열을 입력하세요 >");
+        String s = input.nextLine();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i< chars.length; i++){
+            if(chars[i] != ' '){
+                queue.offer(chars[i]);
+            }
+        }
+        while (queue.size()>1){
+            if(queue.pollFirst()!= queue.pollLast()){
+                System.out.println(false);
+            }
+        }
+        System.out.println(true);
+    }
+}
+
+class class2 {
+    public static void main(String[] args) {
+        String[] s = {"()()", "(())()", ")()(", "(()("};
+        Solution2 solution = new Solution2();
+        for(int i = 0; i<s.length; i++){
+            System.out.println(solution.solution( s[i] ));
+        }
+
+    }
+}
+
+class Solution2 {
+    boolean solution(String s) {
+        boolean tf = false;
+        Stack<Character> stack = new Stack<>();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i< chars.length; i++){
+            if(chars[0] != ')'||chars[chars.length] != '('){
+                stack.push(chars[i]);
+            }
+        }
+        if(stack.empty()!=true){
+            tf = true;
+        }
+        return tf;
+    }
+}
+
