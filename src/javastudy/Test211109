@@ -1,0 +1,20 @@
+package javaclass;
+
+import java.time.LocalDate;
+
+public class Test211109 {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.of(1995,10,21);
+        System.out.println(today.getDayOfYear());
+        Solution solution = new Solution();
+        System.out.println(solution.solution(5,24));
+    }
+}
+
+class Solution {
+    public String solution(int a, int b) {
+        LocalDate day = LocalDate.of(2016, a, b);
+        String result = day.getDayOfWeek().toString();
+        return result.substring(0,3);
+    }
+}
